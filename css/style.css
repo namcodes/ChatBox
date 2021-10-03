@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', Sans-Serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #454E55;
+}
+
+.wrapper {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  padding: 5px;
+  position: relative;
+}
+
+.wrapper.Dark-Theme{
+  background-color: #25292D;
+  color: #f8f8f8;
+}
+
+.wrapper.Dark-Theme .form header .user-tools i,
+.wrapper.Dark-Theme .form form .input-box input{
+  color: #fff;
+}
+
+.wrapper h2 {
+  content: '';
+  position: absolute;
+  font-weight: 400;
+  color: #fff;
+  top: -80px;
+}
+
+/*Form Header*/
+.wrapper .form header {
+  display: flex;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+}
+
+.wrapper .form header .chat-box-logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper .form header .chat-box-logo img {
+  height: 45px;
+  width: 45px;
+  margin-right: 5px;
+}
+
+.wrapper .form header .user-tools {
+  align-items: center;
+  font-size: 20px;
+  color: #000;
+  padding: 5px;
+}
+
+.wrapper .form header .user-tools i {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.wrapper .form header .user-tools i.active {
+  display: none;
+}
+
+.wrapper .form form {
+  width: 100%;
+}
+
+.wrapper .form form .messages {
+  overflow-y: auto;
+  height: 300px;
+  width: 100%;
+}
+
+.wrapper .form form .messages::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+/* mCSB_container declaration */
+
+.wrapper .form form .mCSB_container {
+  text-align: center;
+}
+
+.wrapper .form form .mCSB_container .time {
+  font-size: 13px;
+  color: #535353;
+}
+
+/*My message*/
+
+
+.form form .mCSB_container .personal-message {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.form form .mCSB_container .personal-message .personal-name {
+  font-weight: 500;
+}
+
+.form form .mCSB_container .personal-chat {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.form form .mCSB_container .personal-chat p {
+  background-color: #E49210;
+  padding: 2px 5px;
+  border-radius: 5px;
+  top: -15px;
+  position: relative;
+  color: #2D3238;
+  text-align: left;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-animation: bounce 500ms linear both;
+  bkit-animation: bounce 500ms linear both;
+  animation: bounce 500ms linear both;
+}
+
+.form form .mCSB_container .personal-chat p:before {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  border-left: 5px solid #E49210;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #E49210;
+  border-bottom: 5px solid transparent;
+  right: -10px;
+  top: 5px;
+}
+
+.form form .mCSB_container .personal-chat img {
+  height: 40px;
+  width: 40px;
+  object-fit: center;
+  margin-left: 10px;
+}
+
+/*Friend message*/
+
+.form form .mCSB_container .friend-message {
+  text-align: left;
+  margin: 0;
+}
+
+.form form .mCSB_container .friend-message .friend-name {
+  font-weight: 500;
+}
+
+.form form .mCSB_container .friend-chat {
+  display: flex;
+  margin: 0;
+}
+
+.form form .mCSB_container .friend-chat p {
+  color: #fff;
+  word-wrap: break-word;
+  background-color: #4C555D;
+  border-radius: 5px;
+  padding: 2px 5px;
+  top: -15px;
+  position: relative;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-animation: bounce 500ms linear both;
+  bkit-animation: bounce 500ms linear both;
+  animation: bounce 500ms linear both;
+}
+
+.form form .mCSB_container .friend-chat p:before {
+  width: 0;
+  height: 0;
+  content: '';
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid #4C555D;
+  border-top: 5px solid #4C555D;
+  border-bottom: 5px solid transparent;
+  left: -10px;
+  top: 5px;
+}
+
+.form form .mCSB_container .friend-chat img {
+  height: 40px;
+  width: 40px;
+  object-fit: center;
+  margin-right: 10px;
+}
+
+/* Input box / Input message */
+
+.form form .input-box {
+  padding: 5px 0;
+  display: flex;
+}
+
+.form form .input-box input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid #65707B;
+  color: #333;
+}
+
+.form form .input-box button {
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #E19212;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* mCSB_container */
+
+#mCSB_1_container {
+  margin-right: 0;
+  padding: 0 5px;
+}
+
+div#mCSB_1_scrollbar_vertical.mCSB_scrollTools.mCSB_1_scrollbar.mCS-light.mCSB_scrollTools_vertical {
+  width: 1px;
+}
+
+div.mCSB_draggerContainer, div.mCSB_draggerRail {
+  opacity: 0;
+  width: 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    -webkit-transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    -webkit-transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    -webkit-transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    -webkit-transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    -webkit-transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    -webkit-transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    -webkit-transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    -webkit-transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    -webkit-transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    -webkit-transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    -webkit-transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    -webkit-transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    -webkit-transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    -webkit-transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    -webkit-transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    -webkit-transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    -webkit-transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    -webkit-transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
