@@ -1,11 +1,11 @@
 let firebaseConfig = {
-  apiKey: "AIzaSyC5R7LCZcoI7tCAlIXyzysc7P8aOrQW1FU",
-  authDomain: "realtimechat-f89da.firebaseapp.com",
-  databaseURL: "https://realtimechat-f89da-default-rtdb.firebaseio.com",
-  projectId: "realtimechat-f89da",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
   storageBucket: "",
-  messagingSenderId: "1064752724926",
-  appId: "1:1064752724926:web:6d4317e0e20dd6258197ef"
+  messagingSenderId: "",
+  appId: ""
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
